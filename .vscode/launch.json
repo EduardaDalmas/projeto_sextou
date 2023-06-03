@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SextouApplication<sextou>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.ienh.appsextou.sextou.SextouApplication",
+            "projectName": "sextou",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
