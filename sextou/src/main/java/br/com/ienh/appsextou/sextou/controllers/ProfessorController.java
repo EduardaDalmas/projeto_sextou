@@ -1,4 +1,4 @@
-package br.com.ienh.appsextou.sextou;
+package br.com.ienh.appsextou.sextou.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar todos os estudantes</title>
+    <link rel="stylesheet" href="/resources/assets/css/estilos.css">
+</head>
+<body>
+    <h1>Alunos: </h1>
+    <!-- <p th:text="'Nome: ' + ${alunos}"></p> -->
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+        </tr>
+        <tr th:each="aluno : ${alunos}">
+            <td th:text="${aluno.id}"></td>
+            <td th:text="${aluno.nome}"></td>
+            <td th:text="${aluno.endereco}"></td>
+        </tr>
+    </table>
+     
+
+</body>
+</html>
