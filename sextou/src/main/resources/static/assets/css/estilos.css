@@ -2,8 +2,9 @@ body {
     background-color: #0fbb8248;
 }
 
-h1, td, th {
+h1, td, th, a, label, input {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 10px;
 }
 
 tr {
@@ -13,6 +14,8 @@ tr {
 
 td {
    text-align: right;
+   margin: 10px;
+   padding: 5px;
 }
 
 table { 

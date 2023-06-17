@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Professor</title>
+    <link rel="stylesheet" href="/resources/assets/css/estilos.css">
+</head>
+<body>
+    <h1>Editar Professor</h1>
+
+    <form action="#" th:action="@{/professor/salvar}" th:object="${professor}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label for="nome">Nome completo</label><br>
+        <input type="text" id="nome" th:field="*{nome}">
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar professores</title>
+    <link rel="stylesheet" href="/resources/assets/css/estilos.css">
+</head>
+<body>
+    <h1>Lista de professores</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr th:each="professor : ${professores}">
+            <td th:text="${professor.id}"></td>
+            <td th:text="${professor.nome}"></td>
+            <td><a th:href="@{/professor/alterar/{id}(id=${professor.id})}">Editar</a></td>
+            <td><a th:href="@{/professor/remover/{id}(id=${professor.id})}">Remover</a></td>
+        </tr>
+    </table>
+
+    <br>
+    <div>
+        <a th:href="@{/professor/novo}">Novo Professor</a>
+    </div>
+</body>
+</html>

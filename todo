@@ -1,0 +1,5 @@
+/professor/listar  -lista professores
+/professor/novo    -abre form vazio pra digitar
+/professor/salvar  -confirma inclusão
+/professor/alterar -abre form com dados do professor
+/professor/remove  -remover o professor
