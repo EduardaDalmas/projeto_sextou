@@ -1,0 +1,20 @@
+para rodar o banco, ajustar o documento de properties
+
+*para IENH*
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/sisescola2
+spring.datasource.username=root
+spring.datasource.password=ienh
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.show-sql: true
+
+
+*para home*
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/sisescola
+spring.datasource.username=root
+spring.datasource.password=140501
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.show-sql: true
+
+caminho: C:\Users\dudal\OneDrive\Documentos\projeto_sextou\sextou\src\main\resources\application.properties
