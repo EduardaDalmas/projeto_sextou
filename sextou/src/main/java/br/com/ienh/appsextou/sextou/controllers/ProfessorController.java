@@ -40,6 +40,9 @@ public class ProfessorController {
     @PostMapping("/salvar")
     public String insere(@Valid Professor professor, BindingResult result) {
         if(result.hasErrors() == true) {
+            if(professor.getId() != 0) {
+                return "professor/alterar";
+            } 
             return "professor/novo";
         }
         professorRepository.save(professor);
