@@ -7,6 +7,7 @@ import javax.print.DocFlavor.STRING;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.ienh.appsextou.sextou.entities.Professor;
 import br.com.ienh.appsextou.sextou.repositories.ProfessorRepository;
+import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping("/professor")
@@ -36,7 +38,10 @@ public class ProfessorController {
     }
 
     @PostMapping("/salvar")
-    public String insere(Professor professor) {
+    public String insere(@Valid Professor professor, BindingResult result) {
+        if(result.hasErrors() == true) {
+            return "professor/novo";
+        }
         professorRepository.save(professor);
         return "redirect:/professor/listar";
     }
